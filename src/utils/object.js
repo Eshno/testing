@@ -3,7 +3,7 @@ function _get(obj, path) {
     let result;
     for (elem of path) {
         if (!result) result = obj[elem];
-        result = result[elem];
+        else result = result[elem];
     }
     return result;
 }
