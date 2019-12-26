@@ -12,10 +12,11 @@ function _map(array, callback = e => e) {
     return newArray;
 }
 
-function _reduce(array, callback, defaults = array[0]) {
+function _reduce(array, callback, defaults) {
     isValidParams(array, callback);
-    let stack = defaults;
-    for (let i = 1; i < array.length; i++) {
+    const startIndex = defaults === undefined ? 1 : 0;
+    let stack = defaults === undefined ? array[0] : defaults;
+    for (let i = startIndex; i < array.length; i++) {
         stack = callback(stack, array[i]);
     }
     return stack;
