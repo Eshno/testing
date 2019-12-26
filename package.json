@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "mocha": "./node_modules/mocha/bin/mocha",
+    "test": "npm run mocha",
     "lint": "eslint -c .eslintrc.json ./",
-    "fix-lint": "eslint -c .eslintrc.json --fix ./"
+    "fix-lint": "eslint -c .eslintrc.json --fix ./",
+    "validate": "npm run lint && npm run test",
+    "pre-commit": "npm run validate",
+    "pre-push": "npm run validate"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +20,13 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.17.0"
+    "eslint-plugin-react": "^7.17.0",
+    "husky": "^3.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run validate",
+      "pre-push": "npm run validate"
+    }
   }
 }
