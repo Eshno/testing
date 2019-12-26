@@ -14,5 +14,12 @@
     "parserOptions": {
         "ecmaVersion": 2018
     },
-    "rules": {}
+    "rules": {
+        "camelcase": 2,
+        "space-before-blocks": "warn",
+        "space-before-function-paren": ["warn", "never"],
+        "space-in-parens": ["warn", "never"],
+        "object-curly-spacing": ["warn", "always"],
+        "indent": ["error", 2]
+    }
 }

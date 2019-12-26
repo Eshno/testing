@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "mocha": "./node_modules/mocha/bin/mocha",
-    "lint": "eslint -c .eslintrc.json ./"
+    "lint": "eslint -c .eslintrc.json ./",
+    "fix-lint": "eslint -c .eslintrc.json --fix ./"
   },
   "author": "",
   "license": "ISC",
