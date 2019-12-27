@@ -31,7 +31,6 @@ function _filter(array, condition) {
   return newArray;
 }
 
-
 module.exports = {
   _map,
   _reduce,
