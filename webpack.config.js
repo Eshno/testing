@@ -21,7 +21,7 @@ module.exports = {
   resolve: { extensions: ["*", ".js", ".js"] },
   output: {
     path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist",
+    publicPath: "http://localhost:3000/dist/",
     filename: "bundle.js"
   },
   devServer: {
