@@ -1,5 +1,5 @@
-const assert = require('assert');
-const { _get } = require('../src/utils/object');
+import assert from 'assert';
+import { _get } from '../src/utils/object'
 
 describe('Object Utils', function() {
   const testObj1 = { name: { last: 'Felix', first: 'Oliver' } };

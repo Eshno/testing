@@ -1,6 +1,6 @@
-const assert = require('assert');
-const { assert: chaiAssert } = require('chai');
-const { _map, _filter, _reduce } = require('../src/utils/array');
+import assert from 'assert';
+import { assert as chaiAssert } from 'chai';
+import { _map, _filter, _reduce } from '../src/utils/array'
 
 // These test run in the same order as they're declared.
 
