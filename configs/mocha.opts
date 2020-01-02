@@ -2,3 +2,4 @@ mocha/**/*.spec.js enzyme/**/*.spec.js
 --require @babel/register 
 --require ./configs/dom.js
 --require ./configs/enzyme.js
+--require ./configs/mocha-webpack-compiler.js
