@@ -21,7 +21,7 @@ describe('Array Utils', function() {
       assert.equal(_reduce(toTestArray, testCallback), expected);
     })
 
-    it('Should Sum every element and return it with a default value', function() {
+    it('Should Sum every element with the given default value and return it', function() {
       const defaultValue = 6;
       const expected = 6 + defaultValue;
       const testCallback = (val, stack) => stack + val;
