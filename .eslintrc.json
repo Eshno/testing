@@ -13,7 +13,10 @@
     },
     "parserOptions": {
         "ecmaVersion": 2018,
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
     },
     "rules": {
         "camelcase": 2,
@@ -22,6 +25,13 @@
         "space-in-parens": ["warn", "never"],
         "object-curly-spacing": ["warn", "always"],
         "indent": ["error", 2],
-        "eol-last": ["error", "always"]
-    }
+        "eol-last": ["error", "always"],
+        "no-trailing-spaces": "error"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react"]
 }
