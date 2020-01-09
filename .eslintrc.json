@@ -33,5 +33,6 @@
             "version": "detect"
         }
     },
-    "plugins": ["react"]
+    "plugins": ["react"],
+    "parser": "babel-eslint"
 }
