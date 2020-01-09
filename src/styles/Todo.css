@@ -1,0 +1,10 @@
+input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-right: 5px;
+}
+
+.TaskCompleted {
+  font-size: 14px;
+  margin: 0 5px;
+}
