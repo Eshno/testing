@@ -10,4 +10,4 @@ function _get(obj, path) {
 
 module.exports = {
   _get
-}
+};

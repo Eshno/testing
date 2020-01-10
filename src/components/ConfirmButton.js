@@ -7,11 +7,11 @@ export default class ConfirmButton extends Component {
     super(props);
     this.state = {
       displayOpts: false
-    }
+    };
   }
 
   handleDisplay = () => {
-    this.setState({ displayOpts: !this.state.displayOpts })
+    this.setState({ displayOpts: !this.state.displayOpts });
   }
 
   confirmResp = (resp) => {
@@ -26,14 +26,14 @@ export default class ConfirmButton extends Component {
         <button className="ConfirmButtonCancel" onClick={() => this.confirmResp(false)}>Cancel</button>
         <button className="ConfirmButtonConfirm" onClick={() => this.confirmResp(true)}>Confirm</button>
       </div>
-    </div>
+    </div>;
   }
 }
 ConfirmButton.propTypes = {
   msg: string,
   callback: func
-}
+};
 ConfirmButton.defaultProps = {
   msg: '',
   callback: () => { }
-}
+};

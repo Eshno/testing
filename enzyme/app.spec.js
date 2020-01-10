@@ -7,5 +7,5 @@ describe('<App />', function() {
   it('Renders Router', function() {
     const wrapper = shallow(<App />);
     expect(wrapper.find('Routes')).to.have.lengthOf(1);
-  })
-})
+  });
+});

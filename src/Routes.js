@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from "./containers/Home";
 import Todo from "./containers/Todo";
@@ -13,5 +13,5 @@ export default function Routes() {
         <Route component={NotFound} />
       </Switch>
     </Router>
-  )
+  );
 }

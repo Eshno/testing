@@ -32,4 +32,4 @@ module.exports = {
     historyApiFallback: true
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
-}
+};

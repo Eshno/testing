@@ -16,7 +16,7 @@ function TaskList({ tasks, deleteFN, handleInput, handleDone }) {
         </li>
       )}
     </ul>
-  )
+  );
 }
 TaskList.propTypes = {
   deleteFN: func,
@@ -25,14 +25,14 @@ TaskList.propTypes = {
   handleDone: func,
   handleInput: func,
   tasks: array
-}
+};
 
 export default class Todo extends Component {
   constructor(props) {
     super(props);
     this.state = {
       tasks: this.props.defaultTasks,
-    }
+    };
   }
 
   addTask = () => {
@@ -63,12 +63,12 @@ export default class Todo extends Component {
         <TaskList tasks={this.state.tasks} deleteFN={this.deleteTask} handleDone={this.handleDone} handleDesc={this.handleDesc} />
         <button className="addButton" onClick={(this.addTask)}>Add Task</button>
       </div>
-    )
+    );
   }
 }
 Todo.defaultProps = {
   defaultTasks: [{ desc: 'foo', isDone: true }, { desc: 'bar', isDone: false }]
-}
+};
 Todo.propTypes = {
   defaultTasks: array,
-}
+};

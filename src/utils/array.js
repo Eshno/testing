@@ -35,4 +35,4 @@ module.exports = {
   _map,
   _reduce,
   _filter
-}
+};
