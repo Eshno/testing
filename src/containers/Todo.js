@@ -1,6 +1,7 @@
 import { array, bool, func, string } from 'prop-types';
 import React, { Component } from 'react';
 import "../styles/Todo.css";
+import ConfirmButton from '../components/ConfirmButton';
 
 function TaskList({ tasks, deleteFN, handleInput, handleDone }) {
   return (
@@ -11,7 +12,7 @@ function TaskList({ tasks, deleteFN, handleInput, handleDone }) {
             onChange={() => handleInput(index)} style={{ textDecoration: isDone ? 'line-through' : 'none' }} />
           <input type="checkbox" checked={isDone} onChange={() => handleDone(index)} />
           <span className="TaskCompleted">{!isDone || "Task Completed!"}</span>
-          <button onClick={() => deleteFN(index)}>Delete Task</button>
+          <ConfirmButton className="deleteButton" msg={"Delete"} callback={() => deleteFN(index)} />
         </li>
       )}
     </ul>
@@ -30,7 +31,7 @@ export default class Todo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: this.props.defaultTasks
+      tasks: this.props.defaultTasks,
     }
   }
 
@@ -39,7 +40,6 @@ export default class Todo extends Component {
   }
 
   deleteTask = (index) => {
-    if (!confirm("Are you sure you want to delete this task?")) return;
     const newTasks = this.state.tasks.filter((task, tIndex) => index !== tIndex);
     this.setState({ tasks: [...newTasks] });
   }
@@ -61,7 +61,7 @@ export default class Todo extends Component {
       <div className="Todo">
         <h1 className="TodoHead">Simple Unpersistent Todo List</h1>
         <TaskList tasks={this.state.tasks} deleteFN={this.deleteTask} handleDone={this.handleDone} handleDesc={this.handleDesc} />
-        <button onClick={(this.addTask)}>Add Task</button>
+        <button className="addButton" onClick={(this.addTask)}>Add Task</button>
       </div>
     )
   }
