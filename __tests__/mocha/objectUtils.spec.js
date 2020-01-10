@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { _get } from '../src/utils/object';
+import { _get } from '../../src/utils/object';
 
 describe('Object Utils', function() {
   const testObj1 = { name: { last: 'Felix', first: 'Oliver' } };

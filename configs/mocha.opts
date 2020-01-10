@@ -1,4 +1,4 @@
-mocha/**/*.spec.js enzyme/**/*.spec.js
+__tests__/**/*.spec.js
 --require @babel/register 
 --require ./configs/dom.js
 --require ./configs/enzyme.js

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
-import App from '../src/app';
+import App from '../../src/app';
 
 describe('<App />', function() {
   it('Renders Router', function() {

@@ -1,6 +1,6 @@
 import assert from 'assert';
 import { assert as chaiAssert } from 'chai';
-import { _map, _filter, _reduce } from '../src/utils/array';
+import { _map, _filter, _reduce } from '../../src/utils/array';
 
 // These test run in the same order as they're declared.
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai';
 import { mount } from 'enzyme';
-import Todo from '../src/containers/Todo';
+import Todo from '../../src/containers/Todo';
 
 describe('<Todo />', function() {
 
