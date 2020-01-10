@@ -8,10 +8,10 @@ function TaskList({ tasks, deleteFN, handleInput, handleDone }) {
     <ul className="TaskList">
       {tasks.map(({ desc, isDone }, index) =>
         <li className="Task" key={index}>
-          <input type="text" placeholder="description" defaultValue={desc}
+          <input className="TaskTextInput" type="text" placeholder="description" defaultValue={desc}
             onChange={() => handleInput(index)} style={{ textDecoration: isDone ? 'line-through' : 'none' }} />
-          <input type="checkbox" checked={isDone} onChange={() => handleDone(index)} />
-          <span className="TaskCompleted">{!isDone || "Task Completed!"}</span>
+          <input className="TaskCheckBox" type="checkbox" checked={isDone} onChange={() => handleDone(index)} />
+          {!isDone || <span className="TaskCompleted">Task Completed!</span>}
           <ConfirmButton className="deleteButton" msg={"Delete"} callback={() => deleteFN(index)} />
         </li>
       )}
