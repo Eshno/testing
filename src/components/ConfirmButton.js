@@ -20,8 +20,8 @@ export default class ConfirmButton extends Component {
   }
 
   render() {
-    return <div className="ConfirmButton">
-      <button onClick={() => this.handleDisplay()} style={{ display: this.state.displayOpts ? 'none' : 'block' }}>{this.props.msg}</button>
+    return <div className="ConfirmButtonWrapper">
+      <button className="ConfirmButton" onClick={() => this.handleDisplay()} style={{ display: this.state.displayOpts ? 'none' : 'block' }}>{this.props.msg}</button>
       <div style={{ display: this.state.displayOpts ? 'flex' : 'none' }}>
         <button className="ConfirmButtonCancel" onClick={() => this.confirmResp(false)}>Cancel</button>
         <button className="ConfirmButtonConfirm" onClick={() => this.confirmResp(true)}>Confirm</button>
